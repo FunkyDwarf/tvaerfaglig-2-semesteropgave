@@ -8,16 +8,11 @@ namespace NextGen
 {
     internal class Payment
     {
-        private double amount;
+        public double amount { get; }
 
         public Payment(double cashtendered)
         {
             amount = cashtendered;
-        }
-
-        public double getAmount()
-        {
-            return amount;
         }
     }
 }
