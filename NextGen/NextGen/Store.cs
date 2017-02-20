@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NextGen
 {
-    class Store
+    internal class Store
     {
     }
 }
