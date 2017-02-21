@@ -11,7 +11,7 @@ namespace NextGen
 
             // print the catalog
 
-            ProductCatalog catalog = new ProductCatalog();
+            ProductCatalog catalog = myStore.getCatalog();
 
             foreach (ProductDescription product in catalog.getAllProducts().Values)
             {
@@ -25,7 +25,7 @@ namespace NextGen
 
             myStore.getRegister().enterItem(chosenProduct, quantity);
 
-            // make payment
+            Console.WriteLine("Total: " + myStore.getRegister().getSale().getTotal());
 
             myStore.getRegister().endSale();
 

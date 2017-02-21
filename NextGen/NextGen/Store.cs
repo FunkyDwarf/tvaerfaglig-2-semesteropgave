@@ -9,5 +9,10 @@
         {
             return register;
         }
+
+        public ProductCatalog getCatalog()
+        {
+            return catalog;
+        }
     }
 }

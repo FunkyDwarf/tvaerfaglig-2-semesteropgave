@@ -30,5 +30,10 @@
         {
             currentsale.makePayment(cashTendered);
         }
+
+        public Sale getSale()
+        {
+            return currentsale;
+        }
     }
 }

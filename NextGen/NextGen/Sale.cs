@@ -21,7 +21,7 @@ namespace NextGen
                 subTotal = item.getSubtotal();
                 total += subTotal;
             }
-            return subTotal;
+            return total;
         }
 
         public void becomeComplete()
