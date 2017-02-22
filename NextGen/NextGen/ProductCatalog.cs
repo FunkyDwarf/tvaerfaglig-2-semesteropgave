@@ -31,11 +31,9 @@ namespace NextGen
             return descriptions[id];
         }
 
-        // my function
-
-        public Dictionary<int, ProductDescription> getAllProducts()
+        public Dictionary<int, ProductDescription>.ValueCollection getAllProductsDescription()
         {
-            return descriptions;
+            return descriptions.Values;
         }
     }
 }

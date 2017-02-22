@@ -13,7 +13,7 @@ namespace NextGen
 
             ProductCatalog catalog = myStore.getCatalog();
 
-            foreach (ProductDescription product in catalog.getAllProducts().Values)
+            foreach (ProductDescription product in catalog.getAllProductsDescription())
             {
                 Console.WriteLine("itemID: " + product.itemID + " Product: " + product.desctription + " price: " + product.price);
             }
