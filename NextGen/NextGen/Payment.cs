@@ -1,6 +1,6 @@
 ﻿namespace NextGen
 {
-    internal class Payment
+    public class Payment
     {
         public double amount { get; }
 

@@ -2,7 +2,7 @@
 
 namespace NextGen
 {
-    internal class ProductCatalog
+    public class ProductCatalog
     {
         private Dictionary<int, ProductDescription>
             descriptions = new Dictionary<int, ProductDescription>();
@@ -25,6 +25,9 @@ namespace NextGen
 
         public ProductDescription getProductDescription(int id)
         {
+            if (descriptions[id] == null)
+                throw new KeyNotFoundException();
+
             return descriptions[id];
         }
 

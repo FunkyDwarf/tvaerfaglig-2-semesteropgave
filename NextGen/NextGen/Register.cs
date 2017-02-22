@@ -1,6 +1,6 @@
 ﻿namespace NextGen
 {
-    internal class Register
+    public class Register
     {
         private ProductCatalog catalog;
         private Sale currentsale;

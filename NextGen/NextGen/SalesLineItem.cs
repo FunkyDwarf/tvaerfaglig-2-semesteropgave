@@ -1,6 +1,6 @@
 ﻿namespace NextGen
 {
-    internal class SalesLineItem
+    public class SalesLineItem
     {
         private int quantity;
         private ProductDescription description;

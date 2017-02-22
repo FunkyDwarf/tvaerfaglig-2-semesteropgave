@@ -2,7 +2,7 @@
 
 namespace NextGen
 {
-    internal class Sale
+    public class Sale
     {
         private List<SalesLineItem> lineItems =
             new List<SalesLineItem>();

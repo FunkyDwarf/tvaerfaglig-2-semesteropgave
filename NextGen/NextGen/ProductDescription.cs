@@ -1,6 +1,6 @@
 ﻿namespace NextGen
 {
-    internal class ProductDescription
+    public class ProductDescription
     {
         public int itemID { get; }
         public double price { get; }
