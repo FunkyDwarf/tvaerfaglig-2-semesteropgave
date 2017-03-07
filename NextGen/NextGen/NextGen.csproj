@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerCatalog.cs" />
+    <Compile Include="CustomerDescription.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="ProductCatalog.cs" />
     <Compile Include="ProductDescription.cs" />
@@ -51,6 +53,7 @@
     <Compile Include="Register.cs" />
     <Compile Include="Sale.cs" />
     <Compile Include="SalesLineItem.cs" />
+    <Compile Include="StoreSingelton.cs" />
     <Compile Include="Store.cs" />
   </ItemGroup>
   <ItemGroup>

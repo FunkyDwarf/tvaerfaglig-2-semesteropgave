@@ -6,12 +6,15 @@ namespace NextGen
     {
         private static void Main(string[] args)
         {
-            Store myStore = new Store();
-            myStore.getRegister().makeNewSale();
+            //Store myStore = new Store("BIGMAMA", "min-adresse", "7100", "0202029312308");
+
+            StoreSingelton myStore = new StoreSingelton();
+
+            myStore.GetStoreInstance().getRegister().makeNewSale(0);
 
             // print the catalog
 
-            ProductCatalog catalog = myStore.getCatalog();
+            ProductCatalog catalog = myStore.GetStoreInstance().getCatalog();
 
             foreach (ProductDescription product in catalog.getAllProductsDescription())
             {
@@ -23,11 +26,12 @@ namespace NextGen
             Console.Write("Enter quantity: ");
             int quantity = Convert.ToInt32(Console.ReadLine());
 
-            myStore.getRegister().enterItem(chosenProduct, quantity);
+            myStore.GetStoreInstance().getRegister().enterItem(chosenProduct, quantity);
 
-            Console.WriteLine("Total: " + myStore.getRegister().getSale().getTotal());
+            Console.WriteLine("Total: " + myStore.GetStoreInstance().getRegister().getSale().getTotal());
 
-            myStore.getRegister().endSale();
+            //myStore.getRegister().endSale();
+            myStore.GetStoreInstance().getRegister().printSale();
 
             Console.ReadKey();
         }

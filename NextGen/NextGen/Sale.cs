@@ -7,9 +7,15 @@ namespace NextGen
         private List<SalesLineItem> lineItems =
             new List<SalesLineItem>();
 
-        private string date;
-        public bool isComplete { get; private set; }
-        private Payment payment;
+        public bool m_isComplete { get; private set; }
+        private Payment m_payment;
+
+        private CustomerDescription m_customerdescription;
+
+        public Sale(CustomerDescription c)
+        {
+            m_customerdescription = new CustomerDescription(c.kundeNr, c.navn, c.rabatSats);
+        }
 
         public double getTotal()
         {
@@ -26,7 +32,7 @@ namespace NextGen
 
         public void becomeComplete()
         {
-            isComplete = true;
+            m_isComplete = true;
         }
 
         public void makeLineItem(ProductDescription desc, int q)
@@ -36,7 +42,12 @@ namespace NextGen
 
         public void makePayment(double cashTendered)
         {
-            payment = new Payment(cashTendered);
+            m_payment = new Payment(cashTendered);
+        }
+
+        public CustomerDescription getCustomer()
+        {
+            return m_customerdescription;
         }
     }
 }
