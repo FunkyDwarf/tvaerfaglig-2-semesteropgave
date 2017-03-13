@@ -2,8 +2,7 @@
 
 namespace NextGen
 {
-    public class ProductCatalog
-    {
+    public class ProductCatalog {
         private Dictionary<int, ProductDescription>
             descriptions = new Dictionary<int, ProductDescription>();
 

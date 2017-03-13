@@ -9,9 +9,13 @@ namespace NextGen
     public class StoreSingelton
     {
         private static object syncLock = new object();
-        private Store _instance;
+        static private Store _instance;
 
-        public Store GetStoreInstance()
+        private StoreSingelton()
+        {
+        }
+
+        static public Store GetStoreInstance()
         {
             if (_instance == null)
             {

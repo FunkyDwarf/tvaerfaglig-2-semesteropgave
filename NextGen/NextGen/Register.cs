@@ -40,23 +40,15 @@
 
         public void printSale()
         {
-            StoreSingelton myStore = new StoreSingelton();
+            Store myStore = StoreSingelton.GetStoreInstance();
 
-            string navn = myStore.GetStoreInstance().m_navn;
-            string adresse = myStore.GetStoreInstance().m_adresse;
-            string postnr = myStore.GetStoreInstance().m_postnr;
-            string m_CVR = myStore.GetStoreInstance().m_CVR;
+            string navn = myStore.m_navn;
+            string adresse = myStore.m_adresse;
+            string postnr = myStore.m_postnr;
+            string m_CVR = myStore.m_CVR;
 
             System.Console.WriteLine("STORE NAVN:" + navn + " ADRESSE: " + adresse + " Postnr: " + postnr + " m_CVR: " + m_CVR);
             System.Console.WriteLine("KUNDE NR: " + m_currentsale.getCustomer().kundeNr + " KUNDE NAVN: " + m_currentsale.getCustomer().navn);
         }
-
-        //public void hjælpemetode(Store st)
-        //{
-        // printSale()
-        //int i = metode()
-        //string s = metode2(i)
-        //...
-        //}
     }
 }
